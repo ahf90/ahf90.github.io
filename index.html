@@ -11,6 +11,7 @@
     <title>Alex Friedman</title>
 
     <!-- Bootstrap core CSS -->
+
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom stylesheet -->
@@ -18,12 +19,15 @@
   </head>
 
   <body>
+    <div class="container">
+    <nav class="navbar navbar-light bg-faded rounded navbar-toggleable-md">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#containerNavbar" aria-controls="containerNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Alex Friedman</a>
 
-    <nav class="navbar navbar-light bg-faded">
-        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation"></button>
-        <div class="collapse navbar-toggleable-xs" id="navbar-header">
-          <a class="navbar-brand" href="#">Alex Friedman</a>
-          <ul class="nav navbar-nav">
+        <div class="collapse navbar-collapse" id="containerNavbar">
+          <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link" href="#">Work <span class="sr-only">(current)</span></a>
             </li>
@@ -34,15 +38,10 @@
               <a class="nav-link" href="#">Contact</a>
             </li>
           </ul>
-          <form class="form-inline float-xs-right">
-            <input class="form-control" type="text" placeholder="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
-      </nav> <!-- /navbar -->
-
+    </nav>
     <section class="jumbotron text-xs-center">
-      <div class="container">
+     
         <h1 class="jumbotron-heading">My Work</h1>
         <p class="lead text-muted">This album contains most of my web-development and statistics-related work.</p>
         <p>
@@ -54,35 +53,98 @@
 
     <div class="album text-muted">
       <div class="container">
-
-        <div class="row">
-          <div class="card">
-			<h3 class="card-header">NBA Cluster Analysis</h3>
-            <img src="images/placeholder.png" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="card-footer text-muted">
-			  <p>tags: <small> statistics, python, sports, cluster</small></p>
-		    </div>
-		  </div>
-		  <div class="card">
-			<h3 class="card-header">Title</h3>
-            <img src="images/placeholder.png" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="card-footer text-muted">
-			  <p>tags: <small> statistics, python, sports, cluster</small></p>
-		    </div>
-		  </div>
-		  <div class="card">
-			<h3 class="card-header">Title</h3>
-            <img src="images/placeholder.png" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="card-footer text-muted">
-			  <p>tags: <small> statistics, python, sports, cluster</small></p>
-		    </div>
-		  </div>
-		  
+        <div class="card-deck-wrapper">
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-header">
+                <h3>NBA Cluster Analysis</h3>
+              </div>
+              <img class="card-img-top img-responsive" src="images/cluster.png">
+              <div class="card-block">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+              <div class="card-footer">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <h3>NBA Correlations</h3>
+              </div>
+              <img class="card-img-top img-responsive" src="images/correlation.png">
+              <div class="card-block">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h3>NBA Projections</h3>
+              </div>
+              <img class="card-img-top img-responsive" src="images/projections.png">
+              <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+          </div>
         </div>
-
+        <div class="card-deck-wrapper">
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-header">
+                <h3>NCAA Basketball Projections</h3>
+              </div>
+              <img class="card-img-top img-responsive" src="images/cluster.png">
+              <div class="card-block">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+              <div class="card-footer">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <h3>HooScript</h3>
+              </div>
+              <img class="card-img-top img-responsive" src="images/hooscript.png">
+              <div class="card-block">
+                  <p class="card-text">Generate and mass-enter lineups for Yahoo! DFS</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h3>FanDuel Ownership</h3>
+              </div>
+              <img class="card-img-top img-responsive" src="images/fdownership.png">
+              <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
