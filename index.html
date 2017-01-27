@@ -19,7 +19,24 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">About Me</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           Below are my various DFS-related websites. They reflect my interests in ownership data, projections, and lineup optimization.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <nav class="navbar navbar-light bg-faded rounded navbar-toggleable-md">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#containerNavbar" aria-controls="containerNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -32,24 +49,25 @@
               <a class="nav-link" href="#">Work <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" data-toggle="modal" data-target="#aboutModal" href="#">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="mailto:ahfriedman09@gmail.com">Contact</a>
             </li>
           </ul>
         </div>
     </nav>
-    <section class="jumbotron text-xs-center">
-     
-        <h1 class="jumbotron-heading">My Work</h1>
-        <p class="lead text-muted">This album contains most of my web-development and statistics-related work.</p>
-        <p>
-          <a href="#" class="btn btn-primary">Learn more about me</a>
-          <a href="#" class="btn btn-secondary">Contact me</a>
-        </p>
-      </div>
-    </section>
+    <div class="container">
+      <section class="jumbotron text-xs-center">
+       
+          <h1 class="jumbotron-heading">My Work</h1>
+          <p class="lead text-muted">This album contains most of my web-development and statistics-related work.</p>
+          <p>            
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#aboutModal">Learn more about me</button>
+            <a href="mailto:ahfriedman09@gmail.com" class="btn btn-secondary">Contact</a>
+          </p>
+      </section>
+    </div>
 
     <div class="album text-muted">
       <div class="container">
@@ -59,14 +77,12 @@
               <div class="card-header">
                 <h3>NBA Cluster Analysis</h3>
               </div>
-              <img class="card-img-top img-responsive" src="images/cluster.png">
+               <a href='http://nbacluster.appspot.com/create' target="_blank"><img class="card-img-top img-responsive img-thumbnail" src="images/cluster.png"></a>
               <div class="card-block">
-                  <h4 class="card-title">Card title</h4>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <p class="card-text">Uses k-means clustering to cluster NBA players based on user-selectable statistics. Returns cluster assignments, cluster centroids, and "Defense vs. Cluster" for each NBA team.</p>
               </div>
               <div class="card-footer">
-                  <small class="text-muted">Last updated 3 mins ago</small>
+                  <small class="text-muted">python, google app engine, jQuery, cluster analysis, k-means clustering, statistics, NBA, DFS</small>
               </div>
             </div>
             
@@ -74,28 +90,24 @@
               <div class="card-header">
                 <h3>NBA Correlations</h3>
               </div>
-              <img class="card-img-top img-responsive" src="images/correlation.png">
+               <a href='http://nbacluster.appspot.com/show/correls' target="_blank"><img class="card-img-top img-responsive" src="images/correlation.png"></a>
               <div class="card-block">
-                  <h4 class="card-title">Card title</h4>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <p class="card-text">Compares and calculates correlations for NBA player's fantasy sports scores.</p>
               </div>
               <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
+                <small class="text-muted">python, google app engine, jQuery, statistics, NBA, DFS</small>
               </div>
             </div>
             <div class="card">
               <div class="card-header">
                 <h3>NBA Projections</h3>
               </div>
-              <img class="card-img-top img-responsive" src="images/projections.png">
+               <a href='https://goo.gl/chWwjJ' target="_blank"><img class="card-img-top img-responsive" src="images/projections.png"></a>
               <div class="card-block">
-                <h4 class="card-title">Card title</h4>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <p class="card-text">Daily fantasy sports projections for NBA players.</p>
               </div>
               <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
+                <small class="text-muted">python, google app engine, Google Apps Script, projections, k-means clustering, cluster analysis, numpy, statistics, NBA, DFS</small>
               </div>
             </div>
           </div>
@@ -104,16 +116,14 @@
           <div class="card-deck">
             <div class="card">
               <div class="card-header">
-                <h3>NCAA Basketball Projections</h3>
+                <h3>NCAAB Projections</h3>
               </div>
-              <img class="card-img-top img-responsive" src="images/cluster.png">
+              <a href='http://brainy-cbb.com' target="_blank"><img class="card-img-top img-responsive" src="images/brainycbb.png"></a>
               <div class="card-block">
-                  <h4 class="card-title">Card title</h4>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <p class="card-text">Daily fantasy sports projections for college Basketball.  The website displayed editable projections and a lineup optimizer. The site is deprecated because college daily fantasy sports no longer exists.  A demo remains to show how the website worked.</p>
               </div>
               <div class="card-footer">
-                  <small class="text-muted">Last updated 3 mins ago</small>
+                  <small class="text-muted">python, google app engine, AngularJS, Chrome extension, knapsack algorithm, projections, k-means clustering, cluster analysis, statistics, numpy, Vegas, CBB, DFS, etc.</small>
               </div>
             </div>
             
@@ -121,26 +131,53 @@
               <div class="card-header">
                 <h3>HooScript</h3>
               </div>
-              <img class="card-img-top img-responsive" src="images/hooscript.png">
+               <a href='http://hooscript.appspot.com' target="_blank"><img class="card-img-top img-responsive" src="images/hooscript.png"></a>
               <div class="card-block">
-                  <p class="card-text">Generate and mass-enter lineups for Yahoo! DFS</p>
+                  <p class="card-text">Generate lineups for Yahoo! DFS and auto-enter them using a Chrome extension</p>
               </div>
               <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
+                  <small class="text-muted">python, google app engine, jQuery, knapsack algorithm, Chrome extension, DFS</small>
               </div>
             </div>
             <div class="card">
               <div class="card-header">
                 <h3>FanDuel Ownership</h3>
               </div>
-              <img class="card-img-top img-responsive" src="images/fdownership.png">
+               <a href='http://fdownership.appspot.com' target="_blank"><img class="card-img-top img-responsive" src="images/fdownership.png"></a>
               <div class="card-block">
-                <h4 class="card-title">Card title</h4>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <p class="card-text">Ownership data for past FanDuel contests</p>
               </div>
               <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
+                <small class="text-muted">python, google app engine, jQuery, web scraping</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-deck-wrapper">
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-header">
+                <h3>FanDuel Ownership Analysis</h3>
+              </div>
+               <a href='http://fdo-analysis.appspot.com' target="_blank"><img class="card-img-top img-responsive" src="images/fdo-analysis.png"></a>
+              <div class="card-block">
+                  <p class="card-text">Advanced ownership analysis of FanDuel contests</p>
+              </div>
+              <div class="card-footer">
+                  <small class="text-muted">python, google app engine, jQuery, web scraping, matplotlib, numpy, statistics</small>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <h3>FanDuel & DraftKings Ownership</h3>
+              </div>
+              <img class="card-img-top img-responsive" src="images/ownership.png">
+              <div class="card-block">
+                  <p class="card-text">Ownership data for past FanDuel & DraftKings contests for a client</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">C#, HangFire, Visual Studio, SQL Server, AWS</small>
               </div>
             </div>
           </div>
